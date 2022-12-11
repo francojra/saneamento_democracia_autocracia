@@ -20,6 +20,12 @@
 ### não depende apenas como mutios morrem prematuramente, mas também do que mais as pessoas 
 ### estão a morrer e de como isto está a mudar.
 
+# Carregar pacotes -------------------------------------------------------------------------------------------------------------------------
+
+library(tidyverse)
+library(cols4all)
+library(hrbrthemes)
+library(ggthemes)
 
 
 
