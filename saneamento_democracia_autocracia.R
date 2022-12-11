@@ -27,8 +27,18 @@ library(cols4all)
 library(hrbrthemes)
 library(ggthemes)
 
+# Carregar dados ---------------------------------------------------------------------------------------------------------------------------
 
+san <- read.csv("share-deaths-unsafe-sanitation.csv")
+view(san)
+names(san)
 
+# Manipular dados --------------------------------------------------------------------------------------------------------------------------
+
+san <- san %>%
+  select(-Code) %>%
+  rename(por_mort_san = Deaths...Cause..All.causes...Risk..Unsafe.sanitation...Sex..Both...Age..Age.standardized..Percent.) %>%
+  view()
 
 
 
