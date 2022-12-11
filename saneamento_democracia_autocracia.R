@@ -60,4 +60,17 @@ san3 <- san %>%
 
 # Gráficos ---------------------------------------------------------------------------------------------------------------------------------
 
+c4a("safe", 6)
 
+ggplot(san1, aes(x = fct_reorder(Entity, media), y = media, fill = Entity)) +
+  geom_col(width = 0.9) +
+  geom_errorbar(aes(ymax = media + se, ymin = media + se),
+                size = 0.8, width = 0.2) +
+  scale_y_continuous(expand = expansion(mult = c(0,0))) +
+  scale_fill_manual(values = c("#88CCEE", "#CC6677",
+                               "#DDCC77", "#117733",
+                               "#332288", "#AA4499")) +
+  labs(x = "Países", y = "Mortes por falta\n de saneamento (%)") +
+  theme_ipsum(axis_text_size = 14, axis_title_size = 16) +
+  theme(legend.position = "none", 
+        axis.text = element_text(color = "black"))
