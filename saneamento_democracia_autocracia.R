@@ -40,6 +40,14 @@ san <- san %>%
   rename(por_mort_san = Deaths...Cause..All.causes...Risk..Unsafe.sanitation...Sex..Both...Age..Age.standardized..Percent.) %>%
   view()
 
+san1 <- san %>%
+  filter(Entity %in% c("United States", "Japan", "Germany",
+                       "Cuba", "China", "North Korea")) %>%
+  group_by(Entity) %>%
+  summarise(media = mean(por_mort_san),
+            n = n(), sd = sd(por_mort_san),
+            se = sd/sqrt(n)) %>%
+  view()
 
 
 
