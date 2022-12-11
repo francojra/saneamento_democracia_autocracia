@@ -49,5 +49,15 @@ san1 <- san %>%
             se = sd/sqrt(n)) %>%
   view()
 
+san2 <- san %>%
+  filter(Entity %in% c("United States", "Japan", "Germany",
+                       "Cuba", "China", "North Korea")) %>%
+  view()
+
+san3 <- san %>%
+  filter(Entity %in% c("United States", "Brazil", "China")) %>% 
+  view()
+
+# Gráficos ---------------------------------------------------------------------------------------------------------------------------------
 
 
