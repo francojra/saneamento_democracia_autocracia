@@ -70,7 +70,9 @@ ggplot(san1, aes(x = fct_reorder(Entity, media), y = media, fill = Entity)) +
   scale_fill_manual(values = c("#88CCEE", "#CC6677",
                                "#DDCC77", "#117733",
                                "#332288", "#AA4499")) +
-  labs(x = "Países", y = "Mortes por falta\n de saneamento (%)") +
+  scale_x_discrete(labels = c("Alemanha", "Japão", "Estados Unidos",
+                              "Coreia do Norte", "Cuba", "China")) +
+  labs(x = "Países", y = "Mortes por falta de\n saneamento (%)") +
   theme_ipsum(axis_text_size = 14, axis_title_size = 16) +
   theme(legend.position = "none", 
         axis.text = element_text(color = "black"))
